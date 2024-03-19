@@ -87,7 +87,6 @@
 * Global Matching Monte Carlo driver
 * ----------------------------------
 
-.param mismatch_factor*MC_MM_SWITCH*AGAUSS(0,1.0,1) = 0 mismatch_factor*MC_MM_SWITCH*AGAUSS(0,1.0,1) = 0
 *    statistics{
 *       mismatch{
 *          vary mm_z1 dist=gauss std=mismatch_factor
