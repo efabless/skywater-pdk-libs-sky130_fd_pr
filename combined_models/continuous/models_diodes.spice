@@ -71,7 +71,7 @@ Dsky130_fd_pr__model__parasitic__diode_ps2dn__extended_drain a c sky130_fd_pr__m
 + ik = {2.08e-009/1e-12}
 + ikr = 0
 ******set to 40V so design can evaluate circuits using up to 36V
-+ vb = {sky130_fd_pr__nfet_20v0_zvt_vb}
++ bv = {sky130_fd_pr__nfet_20v0_zvt_vb}
 + ibv = 0.00106
 + trs = 0
 + eg = 1.17
@@ -148,7 +148,7 @@ Dsky130_fd_pr__model__parasitic__diode_ps2dn a c sky130_fd_pr__model__parasitic_
 + rs = {900*1e-12}
 + ik = {2.08e-009/1e-12}
 + ikr = {0/1e-12}
-+ vb = {16.95/(1+0.2*(sw_func_dnw_sub_cj-1))}
++ bv = {16.95/(1+0.2*(sw_func_dnw_sub_cj-1))}
 + ibv = 0.00106
 + trs = 0
 + eg = 1.17
@@ -225,7 +225,7 @@ Dsky130_fd_pr__model__parasitic__diode_pw2dn_defet a c diodeint area = {area} pj
 + ik = {2.08e-009/1e-12}
 + ikr = {0/1e-12}
 ******set to 40V so design can evaluate circuits using up to 36V
-+ vb = {26/(1+0.3*(sw_func_pw_dnw_cj-1))}
++ bv = {26/(1+0.3*(sw_func_pw_dnw_cj-1))}
 + ibv = 0.00106
 + trs = 0
 + xti = 3.0
@@ -301,7 +301,7 @@ Dsky130_fd_pr__model__parasitic__diode_pw2dn a c diodeint area = {area} pj = {pe
 + rs = {900*1e-12}
 + ik = {2.08e-009/1e-12}
 + ikr = {0/1e-12}
-+ vb = {16.38/(1+0.3*(sw_func_pw_dnw_cj-1))}
++ bv = {16.38/(1+0.3*(sw_func_pw_dnw_cj-1))}
 + ibv = 0.00106
 + trs = 0
 + eg = 1.17
@@ -376,7 +376,7 @@ Dsky130_fd_pr__diode_pw2nd_05v5_defet a c diodeint area = {area} pj = {perim}
 + rs = {981*1e-12}
 + ik = {1.3e-009/1e-12}
 + ikr = {0/1e-12}
-+ vb = {11.7/sw_func_nsd_pw_cj}
++ bv = {11.7/sw_func_nsd_pw_cj}
 + ibv = 0.00106
 + trs = 0
 + eg = 1.05
@@ -493,7 +493,7 @@ Dsky130_fd_pr__diode_pw2nd_05v5_lvt a c diodeint area = {area} pj = {perim}
 + rs = {981*1e-12}
 + ik = {1.3e-009/1e-12}
 + ikr = {0/1e-12}
-+ vb = {11.9/sw_func_nsd_pw_cj}
++ bv = {11.9/sw_func_nsd_pw_cj}
 + ibv = 0.00106
 + trs = 0
 + eg = 1.05
@@ -567,7 +567,7 @@ Dsky130_fd_pr__diode_pw2nd_05v5_nvt a c diodeint area = {area} pj = {perim}
 + rs = {600*1e-12}
 + ik = {4.76e-008/1e-12}
 + ikr = {0/1e-12}
-+ vb = {12.69/sw_func_nsd_pw_cj}
++ bv = {12.69/sw_func_nsd_pw_cj}
 + ibv = 0.00106
 + trs = 0
 + eg = 1.05
@@ -643,7 +643,7 @@ Dsky130_fd_pr__diode_pw2nd_05v5 a c ndiode area = {area} pj = {perim}
 + rs = {rs_int}
 + ik = {1.3e-009/1e-12}
 + ikr = 0
-+ vb = {11.7/sw_func_nsd_pw_cj}
++ bv = {11.7/sw_func_nsd_pw_cj}
 + ibv = 0.00106
 + trs = 0
 + eg = 1.05
@@ -719,7 +719,7 @@ Dsky130_fd_pr__diode_pw2nd_11v0 a c ndiode_h area = {area} pj = {perim}
 + rs = {rs_int}
 + ik = {1.3e-009/1e-12}
 + ikr = {0/1e-12}
-+ vb = {12.636/sw_func_nsd_pw_cj}
++ bv = {12.636/sw_func_nsd_pw_cj}
 + ibv = 0.00106
 + trs = 0
 + eg = 0.92
@@ -794,7 +794,7 @@ Dsky130_fd_pr__model__parasitic__diode_pd2nw a c diodeint area = {area} pj = {pe
 + rs = {900*1e-12}
 + ik = {2.08e-009/1e-12}
 + ikr = {0/1e-12}
-+ vb = {16.848/sw_func_nw_pw_cj}
++ bv = {16.848/sw_func_nw_pw_cj}
 + ibv = 0.00106
 + trs = 0
 + eg = 1.17
@@ -870,7 +870,7 @@ Dsky130_fd_pr__photodiode a c diodeint area = {area} pj = {perim}
 + rs = {900*1e-12}
 + ik = {2.08e-009/1e-12}
 + ikr = {0/1e-12}
-+ vb = {16.95/sw_func_psd_nw_cj}
++ bv = {16.95/sw_func_psd_nw_cj}
 + ibv = 0.00106
 + trs = 0
 + eg = 1.17
@@ -989,7 +989,7 @@ Dsky130_fd_pr__diode_pd2nw_05v5_hvt a c diodeint area = {area} pj = {perim}
 + rs = {600*1e-12}
 + ik = {4.76e-008/1e-12}
 + ikr = {0/1e-12}
-+ vb = {12.8/sw_func_psd_nw_cj}
++ bv = {12.8/sw_func_psd_nw_cj}
 + ibv = 0.00106
 + trs = 0
 + eg = 1.05
@@ -1065,7 +1065,7 @@ Dsky130_fd_pr__diode_pd2nw_05v5_lvt a c  diodeint area = {area} pj = {perim}
 + rs = {600*1e-12}
 + ik = {4.76e-008/1e-12}
 + ikr = {0/1e-12}
-+ vb = {12.69/sw_func_psd_nw_cj}
++ bv = {12.69/sw_func_psd_nw_cj}
 + ibv = 0.00106
 + trs = 0
 + eg = 1.05
@@ -1142,7 +1142,7 @@ Dsky130_fd_pr__diode_pd2nw_05v5 a c pdiode area = {area} pj = {perim}
 + rs = {rs_int}
 + ik = {4.76e-008/1e-12}
 + ikr = 0
-+ vb = {12.69/sw_func_psd_nw_cj}
++ bv = {12.69/sw_func_psd_nw_cj}
 + ibv = 0.00106
 + trs = 0
 + eg = 1.05
@@ -1218,7 +1218,7 @@ Dsky130_fd_pr__diode_pd2nw_11v0 a c pdiode_h area = {area} pj = {perim}
 + rs = {rs_int}
 + ik = {4.76e-008/1e-12}
 + ikr = 0
-+ vb = {12.69/sw_func_psd_nw_cj}
++ bv = {12.69/sw_func_psd_nw_cj}
 + ibv = 0.00106
 + trs = 0
 + eg = 1.05
