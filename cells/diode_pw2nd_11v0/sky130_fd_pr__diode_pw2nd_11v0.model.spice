@@ -35,7 +35,7 @@
 + rs = 981 ; Units: ohm (ohm/meter^2 if area defined)
 + ik = '1.3e-009/1e-12' ; Units: amper/meter^2
 + ikr = '0/1e-12' ; Units: amper/meter^2
-+ vb = 12.636 ; Units: volt
++ bv = 12.636 ; Units: volt
 + ibv = 0.00106 ; Units: amper
 + trs = 0 ; Units: 1/coulomb
 + eg = 0.92 ; Units: electron-volt
