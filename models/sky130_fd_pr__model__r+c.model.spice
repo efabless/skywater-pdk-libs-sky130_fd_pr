@@ -200,13 +200,30 @@ D0 N P sky130_fd_pr__diode_pd2nw_11v0 area={area} pj={perim}
 * Subcircuit definition HV diffusion resistors
 
 .subckt sky130_fd_pr__res_generic_nd__hv t1 t2 b w=1 l=1
-r0 t1 t2 sky130_fd_pr__res_generic_nd__hv w = {w} l = {l}
-d0 b t1 sky130_fd_pr__diode_pw2nd_11v0 area='w*l*0.5' pj='w+l'
-d1 b t2 sky130_fd_pr__diode_pw2nd_11v0 area='w*l*0.5' pj='w+l'
+R0 t1 t2 sky130_fd_pr__res_generic_nd__hv w = {w} l = {l}
+D0 b t1 sky130_fd_pr__diode_pw2nd_11v0 area='w*l*0.5' pj='w+l'
+D1 b t2 sky130_fd_pr__diode_pw2nd_11v0 area='w*l*0.5' pj='w+l'
 .ends sky130_fd_pr__res_generic_nd__hv
 
 .subckt sky130_fd_pr__res_generic_pd__hv t1 t2 b w=1 l=1
-r0 t1 t2 sky130_fd_pr__res_generic_pd__hv w = {w} l = {l}
-d0 t1 b sky130_fd_pr__diode_pd2nw_11v0 area='w*l*0.5' pj='w+l'
-d1 t1 b sky130_fd_pr__diode_pd2nw_11v0 area='w*l*0.5' pj='w+l'
+R0 t1 t2 sky130_fd_pr__res_generic_pd__hv w = {w} l = {l}
+D0 t1 b sky130_fd_pr__diode_pd2nw_11v0 area='w*l*0.5' pj='w+l'
+D1 t1 b sky130_fd_pr__diode_pd2nw_11v0 area='w*l*0.5' pj='w+l'
 .ends sky130_fd_pr__res_generic_pd__hv
+
+* Subcircuit definition LV diffusion resistors
+
+.subckt sky130_fd_pr__res_generic_nd t1 t2 b w=1 l=1
+R0 t1 t2 sky130_fd_pr__res_generic_nd w = {w} l = {l}
+.ends
+
+.subckt sky130_fd_pr__res_generic_pd t1 t2 b w=1 l=1
+R0 t1 t2 sky130_fd_pr__res_generic_pd w = {w} l = {l}
+.ends
+
+* Subcircuit definition poly resistors
+
+.subckt sky130_fd_pr__res_generic_po t1 t2 w=1 l=1
+R0 t1 t2 sky130_fd_pr__res_generic_po w = {w} l = {l}
+.ends
+
