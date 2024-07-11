@@ -83,7 +83,7 @@
 + m4_dw = -0.025u
 + m5_dw = -0.09u
 + rdl_dw = 0.0u
-.include "r+c.mrp1monte.spice"
+*.include "r+c.mrp1monte.spice"
 .model mcp1f c tc1 = 0 tc2 = 0 cox = {cp1f} capsw = {cp1fsw} w = {wminp1} tnom = 25.0
 .model mcl1f c tc1 = 0 tc2 = 0 cox = {cl1f} capsw = {cl1fsw} w = {wminl1} tnom = 25.0
 .model mcl1d c tc1 = 0 tc2 = 0 cox = {cl1d} capsw = {cl1dsw} w = {wminl1} tnom = 25.0
@@ -210,16 +210,6 @@ R0 t1 t2 sky130_fd_pr__res_generic_pd__hv w = {w} l = {l}
 D0 t1 b sky130_fd_pr__diode_pd2nw_11v0 area='w*l*0.5' pj='w+l'
 D1 t1 b sky130_fd_pr__diode_pd2nw_11v0 area='w*l*0.5' pj='w+l'
 .ends sky130_fd_pr__res_generic_pd__hv
-
-* Subcircuit definition LV diffusion resistors
-
-.subckt sky130_fd_pr__res_generic_nd t1 t2 b w=1 l=1
-R0 t1 t2 sky130_fd_pr__res_generic_nd w = {w} l = {l}
-.ends
-
-.subckt sky130_fd_pr__res_generic_pd t1 t2 b w=1 l=1
-R0 t1 t2 sky130_fd_pr__res_generic_pd w = {w} l = {l}
-.ends
 
 * Subcircuit definition poly resistors
 
