@@ -863,7 +863,7 @@ xdNSrc b s sky130_fd_pr__diode_pw2nd_05v5_defet area = {as} perim = {ps}
 
 .subckt  sky130_fd_pr__nfet_g5v0d16v0 d g s b mult=1
 + 
-.param  w = 5 l = 0.7 sa = 0 sb = 0 sd = 0 nf = 1
+.param  w = 5 l = 0.7 nf = 1 sa = 0 sb = 0 sd = 0
 *** All values are estimated, the real values supplied and overwritten by PDK netlist
 + ad = {3.89*(w+1.3)}
 + pd = {2*(3.89+w+1.3)}
@@ -889,7 +889,7 @@ Xsky130_fd_pr__nfet_g5v0d16v0 d1 g s b sky130_fd_pr__nfet_g5v0d16v0_base l = {l}
 
 .subckt  sky130_fd_pr__nfet_g5v0d16v0_base  d g s b  mult=1
 + l=1 w=1 
-.param  ad = 0 as = 0 pd = 0 ps = 0 nrd = 0 nrs = 0 sa = 0 sb = 0 sd = 0 nf = 1
+.param  nf = 1 ad = 0 as = 0 pd = 0 ps = 0 nrd = 0 nrs = 0 sa = 0 sb = 0 sd = 0
 + swx_vth0_delta = {sw_vth0_sky130_fd_pr__nfet_g5v0d16v0+sw_mm_vth0_sky130_fd_pr__nfet_g5v0d16v0*mismatch_factor*MC_MM_SWITCH*AGAUSS(0,1.0,1)/sqrt(l*w*mult)+sw_vth0_sky130_fd_pr__nfet_g5v0d16v0_mc}
 
 
@@ -2424,7 +2424,7 @@ xdNDrain2 b d1 sky130_fd_pr__model__parasitic__diode_ps2dn__extended_drain area 
 
 .subckt  sky130_fd_pr__esd_nfet_05v0_nvt d g s b mult=1
 + 
-.param  l = 1 w = 1 ad = 0 as = 0 pd = 0 ps = 0 nrd = {0.14/w} nrs = {0.14/w} sa = 0 sb = 0 sd = 0 nf = 1
+.param  l = 1 w = 1 nf = 1 ad = 0 as = 0 pd = 0 ps = 0 nrd = {0.14/w} nrs = {0.14/w} sa = 0 sb = 0 sd = 0
 + swx_nrds = {89.1*nf/w+443.5}
 *   Legacy parameter fitting from Cypress
 + sky130_fd_pr__nfet_05v0_nvt_dlc_diff = -1.5781e-08
@@ -2772,7 +2772,7 @@ Msky130_fd_pr__esd_nfet_05v0_nvt d g s b sky130_fd_pr__esd_nfet_05v0_nvt_model l
 
 .subckt  sky130_fd_pr__nfet_01v8_esd d g s b mult=1
 + 
-.param  l = 1 w = 1 ad = 0 as = 0 pd = 0 ps = 0 nrd = {0.14/w} nrs = {0.14/w} sa = 0 sb = 0 sd = 0 nf = 1
+.param  l = 1 w = 1 nf = 1 ad = 0 as = 0 pd = 0 ps = 0 nrd = {0.14/w} nrs = {0.14/w} sa = 0 sb = 0 sd = 0
 + swx_nrds = {89.1*nf/w+443.5}
 * Corners and MC
 + swx_vth = {sw_vth0_sky130_fd_pr__nfet_01v8+sw_mm_vth0_sky130_fd_pr__nfet_01v8*mismatch_factor*MC_MM_SWITCH*AGAUSS(0,1.0,1)/sqrt(l*w*mult)+sw_vth0_sky130_fd_pr__nfet_01v8_mc}
@@ -3094,7 +3094,7 @@ Msky130_fd_pr__nfet_01v8_esd d g s b nshortesd_model l = {l} w = {w} ad = {ad} a
 
 .subckt  sky130_fd_pr__esd_nfet_g5v0d10v5 d g s b mult=1
 + 
-.param  l = 1 w = 1 ad = 0 as = 0 pd = 0 ps = 0 nrd = {0.14/w} nrs = {0.14/w} sa = 0 sb = 0 sd = 0 nf = 1
+.param  l = 1 w = 1 nf = 1 ad = 0 as = 0 pd = 0 ps = 0 nrd = {0.14/w} nrs = {0.14/w} sa = 0 sb = 0 sd = 0
 + swx_nrds = {89.1*nf/w+443.5}
 * Corners and MC
 + swx_vth = {sw_vth0_sky130_fd_pr__nfet_g5v0d10v5+sw_mm_vth0_sky130_fd_pr__nfet_g5v0d10v5*mismatch_factor*MC_MM_SWITCH*AGAUSS(0,1.0,1)/sqrt(l*w*mult)+sw_vth0_sky130_fd_pr__nfet_g5v0d10v5_mc}
@@ -3416,7 +3416,7 @@ Msky130_fd_pr__esd_nfet_g5v0d10v5 d g s b sky130_fd_pr__esd_nfet_g5v0d10v5_model
 
 .subckt  sky130_fd_pr__nfet_01v8_lvt  d g s b  mult=1
 + 
-.param  l = 1 w = 1 ad = 0 as = 0 pd = 0 ps = 0 nrd = {0.14/w} nrs = {0.14/w} sa = 0 sb = 0 sd = 0 nf = 1
+.param  l = 1 w = 1 nf = 1 ad = 0 as = 0 pd = 0 ps = 0 nrd = {0.14/w} nrs = {0.14/w} sa = 0 sb = 0 sd = 0
 + swx_nrds = {89.1*nf/w+443.5}
 + swx_vth = {sw_vth0_sky130_fd_pr__nfet_01v8_lvt+sw_vth0_sky130_fd_pr__nfet_01v8_lvt_mc}
 
@@ -7710,7 +7710,7 @@ Msky130_fd_pr__nfet_01v8_lvt  d g s b nlowvt_model l = {l} w = {w} ad = {ad} as 
 
 .subckt  sky130_fd_pr__nfet_03v3_nvt  d g s b  mult=1
 + 
-.param  l = 1 w = 1 ad = 0 as = 0 pd = 0 ps = 0 nrd = {0.14/w} nrs = {0.14/w} sa = 0 sb = 0 sd = 0 nf = 1
+.param  l = 1 w = 1 nf = 1 ad = 0 as = 0 pd = 0 ps = 0 nrd = {0.14/w} nrs = {0.14/w} sa = 0 sb = 0 sd = 0
 + swx_nrds = {89.1*nf/w+443.5}
 + swx_vth = {sw_vth0_sky130_fd_pr__nfet_01v8_nat+sw_mm_vth0_sky130_fd_pr__nfet_01v8_nat*mismatch_factor*MC_MM_SWITCH*AGAUSS(0,1.0,1)/sqrt(l*w*mult)+sw_vth0_sky130_fd_pr__nfet_01v8_nat_mc}
 
@@ -8537,8 +8537,8 @@ Msky130_fd_pr__nfet_03v3_nvt  d g s b ntvnative_model l = {l} w = {w} ad = {ad} 
 
 .subckt  sky130_fd_pr__nfet_05v0_nvt  d g s b  mult=1
 + 
-.param  l = 1 w = 1 ad = 0 as = 0 pd = 0 ps = 0 nrd = {0.14/w} nrs = {0.14/w}
-+ sa = 0 sb = 0 sd = 0 nf = 1
+.param  l = 1 w = 1 nf = 1 ad = 0 as = 0 pd = 0 ps = 0 nrd = {0.14/w} nrs = {0.14/w}
++ sa = 0 sb = 0 sd = 0
 + swx_nrds = {89.1*nf/w+443.5}
 
 Msky130_fd_pr__nfet_05v0_nvt  d g s b nhvnative_model l = {l} w = {w} ad = {ad} as = {as} pd = {pd} ps = {ps} nrd = {nrd} nrs = {nrs} sa = {sa} sb = {sb} sd = {sd} nf = {nf}
@@ -10036,8 +10036,8 @@ Msky130_fd_pr__nfet_05v0_nvt  d g s b nhvnative_model l = {l} w = {w} ad = {ad} 
 
 .subckt  sky130_fd_pr__nfet_01v8  d g s b  mult=1
 + 
-.param  l = 1 w = 1 ad = 0 as = 0 pd = 0 ps = 0 nrd = {0.14/w} nrs = {0.14/w}
-+ sa = 0 sb = 0 sd = 0 nf = 1
+.param  l = 1 w = 1 nf = 1 ad = 0 as = 0 pd = 0 ps = 0 nrd = {0.14/w} nrs = {0.14/w}
++ sa = 0 sb = 0 sd = 0
 + swx_vth = {sw_vth0_sky130_fd_pr__nfet_01v8+sw_mm_vth0_sky130_fd_pr__nfet_01v8*mismatch_factor*MC_MM_SWITCH*AGAUSS(0,1.0,1)/sqrt(l*w*mult)+sw_vth0_sky130_fd_pr__nfet_01v8_mc}
 + swx_nrds = {89.1*nf/w+443.5}
 
@@ -15381,7 +15381,7 @@ Msky130_fd_pr__nfet_01v8  d g s b nshort_model l = {l} w = {w} ad = {ad} as = {a
 
 .subckt  sky130_fd_pr__nfet_g5v0d10v5  d g s b  mult=1
 + 
-.param  l = 1 w = 1 ad = 0 as = 0 pd = 0 ps = 0 nrd = {0.14/w} nrs = {0.14/w} sa = 0 sb = 0 sd = 0 nf = 1
+.param  l = 1 w = 1 nf = 1 ad = 0 as = 0 pd = 0 ps = 0 nrd = {0.14/w} nrs = {0.14/w} sa = 0 sb = 0 sd = 0
 + swx_nrds = {89.1*nf/w+443.5}
 + swx_vth = {sw_vth0_sky130_fd_pr__nfet_g5v0d10v5+sw_vth0_sky130_fd_pr__nfet_g5v0d10v5_mc}
 
@@ -20911,7 +20911,7 @@ Xsky130_fd_pr__pfet_g5v0d16v0 d1 g s b sky130_fd_pr__pfet_g5v0d16v0_base l = {l}
 
 .subckt  sky130_fd_pr__pfet_g5v0d16v0_base  d g s b  mult=1
 + l=1 w=1 
-.param  ad = 0 as = 0 pd = 0 ps = 0 nrd = 0 nrs = 0 sa = 0 sb = 0 sd = 0 nf = 1
+.param  nf = 1 ad = 0 as = 0 pd = 0 ps = 0 nrd = 0 nrs = 0 sa = 0 sb = 0 sd = 0
 
 Msky130_fd_pr__pfet_g5v0d16v0_base  d g s b pvhv_model_base l = {l} w = {w} ad = {ad} as = {as} pd = {pd} ps = {ps} nrd = {nrd} nrs = {nrs*sw_rdp/sw_pw_rs} sa = {sa} sb = {sb} sd = {sd} nf = {nf}
 * + deltox  = 0.3*(sw_tox_hv_corner - sw_tox_hv_nom) + sw_tox_hv_mc + sw_mm_tox_hv * mismatch_factor*MC_MM_SWITCH*AGAUSS(0,1.0,1)/sqrt(l*w*mult)
@@ -21495,7 +21495,7 @@ xdnw2 d1 b sky130_fd_pr__model__parasitic__diode_pw2dn_defet area = {ad} perim =
 
 .subckt  sky130_fd_pr__esd_pfet_g5v0d10v5 d g s b mult=1
 + 
-.param  l = 1 w = 1 ad = 0 as = 0 pd = 0 ps = 0 nrd = {0.14/w} nrs = {0.14/w} sa = 0 sb = 0 sd = 0 nf = 1
+.param  l = 1 w = 1 nf = 1 ad = 0 as = 0 pd = 0 ps = 0 nrd = {0.14/w} nrs = {0.14/w} sa = 0 sb = 0 sd = 0
 + swx_nrds = {361*nf/w+1489}
 *   Legacy fitting parameters
 + sky130_fd_pr__esd_pfet_g5v0d10v5_voff_diff_5 = 0.022334
@@ -21814,7 +21814,7 @@ Msky130_fd_pr__esd_pfet_g5v0d10v5 d g s b sky130_fd_pr__esd_pfet_g5v0d10v5_model
 
 .subckt  sky130_fd_pr__pfet_01v8_hvt  d g s b  mult=1
 + 
-.param  l = 1 w = 1 ad = 0 as = 0 pd = 0 ps = 0 nrd = {0.14/w} nrs = {0.14/w} sa = 0 sb = 0 sd = 0 nf = 1
+.param  l = 1 w = 1 nf = 1 ad = 0 as = 0 pd = 0 ps = 0 nrd = {0.14/w} nrs = {0.14/w} sa = 0 sb = 0 sd = 0
 + swx_nrds = {361*nf/w+1489}
 
 Msky130_fd_pr__pfet_01v8_hvt  d g s b phighvt_model l = {l} w = {w} ad = {ad} as = {as} pd = {pd} ps = {ps} nrd = {nrd} nrs = {nrs} sa = {sa} sb = {sb} sd = {sd} nf = {nf}
@@ -27240,7 +27240,7 @@ Msky130_fd_pr__pfet_01v8_hvt  d g s b phighvt_model l = {l} w = {w} ad = {ad} as
 
 .subckt  sky130_fd_pr__pfet_01v8_lvt  d g s b  mult=1
 + 
-.param  l = 1 w = 1 ad = 0 as = 0 pd = 0 ps = 0 nrd = {0.14/w} nrs = {0.14/w} sa = 0 sb = 0 sd = 0 nf = 1
+.param  l = 1 w = 1 nf = 1 ad = 0 as = 0 pd = 0 ps = 0 nrd = {0.14/w} nrs = {0.14/w} sa = 0 sb = 0 sd = 0
 + swx_nrds = {361*nf/w+1489}
 
 Msky130_fd_pr__pfet_01v8_lvt  d g s b plowvt_model l = {l} w = {w} ad = {ad} as = {as} pd = {pd} ps = {ps} nrd = {nrd} nrs = {nrs} sa = {sa} sb = {sb} sd = {sd} nf = {nf}
@@ -31454,7 +31454,7 @@ Msky130_fd_pr__pfet_01v8_lvt  d g s b plowvt_model l = {l} w = {w} ad = {ad} as 
 
 .subckt  sky130_fd_pr__pfet_01v8  d g s b  mult=1
 + 
-.param  l = 1 w = 1 ad = 0 as = 0 pd = 0 ps = 0 nrd = {0.14/w} nrs = {0.14/w} sa = 0 sb = 0 sd = 0 nf = 1
+.param  l = 1 w = 1 nf = 1 ad = 0 as = 0 pd = 0 ps = 0 nrd = {0.14/w} nrs = {0.14/w} sa = 0 sb = 0 sd = 0
 + swx_nrds = {361*nf/w+1489}
 
 Msky130_fd_pr__pfet_01v8  d g s b pshort_model l = {l} w = {w} ad = {ad} as = {as} pd = {pd} ps = {ps} nrd = {nrd} nrs = {nrs} sa = {sa} sb = {sb} sd = {sd} nf = {nf}
@@ -36916,7 +36916,7 @@ Msky130_fd_pr__pfet_01v8  d g s b pshort_model l = {l} w = {w} ad = {ad} as = {a
 
 .subckt  sky130_fd_pr__pfet_g5v0d10v5  d g s b  mult=1
 + 
-.param  l = 1 w = 1 ad = 0 as = 0 pd = 0 ps = 0 nrd = {0.14/w} nrs = {0.14/w} sa = 0 sb = 0 sd = 0 nf = 1
+.param  l = 1 w = 1 nf = 1 ad = 0 as = 0 pd = 0 ps = 0 nrd = {0.14/w} nrs = {0.14/w} sa = 0 sb = 0 sd = 0
 + swx_nrds = {361*nf/w+1489}
 
 Msky130_fd_pr__pfet_g5v0d10v5  d g s b phv_model l = {l} w = {w} ad = {ad} as = {as} pd = {pd} ps = {ps} nrd = {nrd} nrs = {nrs} sa = {sa} sb = {sb} sd = {sd} nf = {nf}
